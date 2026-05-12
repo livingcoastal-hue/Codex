@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: codex-agent
+version: 0.1.0
+description: A git-native AI agent for the Codex repository
+author: ""
+license: MIT
+model:
+  preferred: claude-sonnet-4-6
+  constraints:
+    temperature: 0.3
+    max_tokens: 4096
+skills:
+  - git-commit
+  - gh-cli
+tools: []
+runtime:
+  max_turns: 30
+  timeout: 120
+tags:
+  - git
+  - agents
+  - codex

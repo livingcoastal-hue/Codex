@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { ArrowRight, Clock, Menu, X } from 'lucide-react'
-import { Swirl, ChromaFlow, FlutedGlass, FilmGrain } from 'shaders/react'
+import { Shader, Swirl, ChromaFlow, FlutedGlass, FilmGrain } from 'shaders/react'
 
 const EASE = 'cubic-bezier(0.25,0.1,0.25,1)'
 const EASE_MOBILE = 'cubic-bezier(0.32,0.72,0,1)'
@@ -156,7 +156,7 @@ export default function HeroSection() {
       style={{ backgroundColor: '#EFEFEF' }}
     >
       {/* Shader overlay */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
+      <Shader className="absolute inset-0 z-10 pointer-events-none">
         <Swirl colorA="#ffffff" colorB="#f0f0f0" detail={1.7} />
         <ChromaFlow
           baseColor="#ffffff"
@@ -180,7 +180,7 @@ export default function HeroSection() {
           speed={0.15}
         />
         <FilmGrain strength={0.05} />
-      </div>
+      </Shader>
 
       {/* Navbar */}
       <nav className="relative z-20 p-2 sm:p-3">
